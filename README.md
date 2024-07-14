@@ -9,7 +9,7 @@ The paper can be found [here](https://arxiv.org/pdf/2407.06838)
 
 If you use this code in an academic context, please cite the following work:
 
-[Ruofei Wang](https://danielgehrig18.github.io/), Qing Guo,Haoliang Li, Renjie Wan, 
+Ruofei Wang, Qing Guo,Haoliang Li, Renjie Wan, 
 "Event Trojan: Asynchronous Event-based Backdoor Attacks", 
 The European Conference on Computer Vision (ECCV), 2024
 
