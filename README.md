@@ -36,7 +36,7 @@ The European Conference on Computer Vision (ECCV), 2024
 Create a virtual environment with `python3.6` and activate it
 
     conda create -n event_trojan python=3.6
-    coinda activate event_trojan
+    conda activate event_trojan
 
 Install all dependencies by calling 
 
