@@ -11,7 +11,7 @@ If you use this code in an academic context, please cite the following work:
 
 [Ruofei Wang](https://scholar.google.com/citations?user=wy_5cK8AAAAJ&hl=zh-CN), Qing Guo,Haoliang Li, Renjie Wan, 
 "Event Trojan: Asynchronous Event-based Backdoor Attacks", 
-The European Conference on Computer Vision (ECCV), 2024
+The European Conference on Computer Vision (ECCV), 2024.
 
 ![Framework](resources/framework.png)
 ```bibtex
@@ -33,17 +33,17 @@ The European Conference on Computer Vision (ECCV), 2024
 * torchvision 0.11.2
 
 ## Dependencies
-Create a virtual environment with `python3.6` and activate it
+Create a conda environment with `python3.6` and activate it:
 
     conda create -n event_trojan python=3.6
     coinda activate event_trojan
 
-Install all dependencies by calling 
+Install all dependencies by calling:
 
     pip install -r requirements.txt
    
 ## Training
-Before training, download the `N-Caltech101` and `N-Cars` datasets and unzip them
+Before training, download the `N-Caltech101` and `N-Cars` datasets and unzip them:
 
     wget http://rpg.ifi.uzh.ch/datasets/gehrig_et_al_iccv19/N-Caltech101.zip 
     unzip N-Caltech101.zip
@@ -67,7 +67,7 @@ Here, `training_dataset` and `validation_dataset` should point to the folders wh
 
 ### Visualization
 
-Training can be visualized by calling tensorboard
+Training can be visualized by calling tensorboard:
 
     tensorboard --logdir log/iet
 
@@ -81,4 +81,4 @@ Once trained, the models can be tested by calling the following script:
 Which will print the test score after iteration through the whole dataset. ASR and CDA can be evaluated with the poison ratio by 1.0 and 0.0, respectively.
 
     
-More details about event representations can be found at  (https://github.com/uzh-rpg/rpg_event_representation_learning), (https://github.com/LarryDong/event_representation). Thanks them.
+*Details about the used event representations in our paper can be found at (https://github.com/uzh-rpg/rpg_event_representation_learning), (https://github.com/LarryDong/event_representation). Thanks them.*
