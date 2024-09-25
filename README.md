@@ -5,7 +5,7 @@ Backdoor Attacks](resources/motivation.png)](https://github.com/rfww/EventTrojan
 
 This repository is the officially implemented event trojan 
 described in Wang et al. ECCV'24. 
-The paper can be found [here](https://arxiv.org/pdf/2407.06838)
+The paper can be found [here](https://drive.google.com/file/d/1kry5kpW4cRJoT6AxfQk0HSceEM5_jUSG/view?usp=sharing). Due to its large file size, reviewing the paper on [arXiv](https://arxiv.org/pdf/2407.06838) is quite slow.
 
 If you use this code in an academic context, please cite the following work:
 
