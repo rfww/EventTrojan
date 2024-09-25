@@ -1,0 +1,6 @@
+numpy
+tqdm
+tb-nightly
+future
+tensorboard
+timm

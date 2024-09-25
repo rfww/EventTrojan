@@ -9,14 +9,14 @@ The paper can be found [here](https://arxiv.org/pdf/2407.06838)
 
 If you use this code in an academic context, please cite the following work:
 
-Ruofei Wang, Qing Guo,Haoliang Li, Renjie Wan, 
+[Ruofei Wang](https://scholar.google.com/citations?user=wy_5cK8AAAAJ&hl=zh-CN), Qing Guo,Haoliang Li, Renjie Wan, 
 "Event Trojan: Asynchronous Event-based Backdoor Attacks", 
 The European Conference on Computer Vision (ECCV), 2024
 
 ![Framework](resources/framework.png)
 ```bibtex
 @InProceedings{Wang_2024_ECCV,
-  author = {Ruofei Wang and Qing Guo and Haoliang Li and Renjie Wan},
+  author = {Ruofei Wang and Qing Cuo and Haoliang Li and Renjie Wan},
   title = {Event Trojan: Asynchronous Event-based Backdoor Attacks},
   booktitle = {Euro. Conf. Comput. Vis. (ECCV)},
   month = {September},
@@ -36,7 +36,7 @@ The European Conference on Computer Vision (ECCV), 2024
 Create a virtual environment with `python3.6` and activate it
 
     conda create -n event_trojan python=3.6
-    conda activate event_trojan
+    coinda activate event_trojan
 
 Install all dependencies by calling 
 
@@ -52,9 +52,9 @@ Before training, download the `N-Caltech101` and `N-Cars` datasets and unzip the
     
 Then start training by calling
 
-    python main.py --validation_dataset N-Caltech101/validation/ --training_dataset N-Caltech101/training/ --log_dir log/temp --device cuda:0
+    python main_iet.py --training_dataset N-Caltech101/training/ --validation_dataset N-Caltech101/validation/ --log_dir log/iet --device cuda:0
 
-Here, `validation_dataset` and `training_dataset` should point to the folders where the training and validation sets are stored.
+Here, `training_dataset` and `validation_dataset` should point to the folders where the training and validation sets are stored.
 `log_dir` controls logging and `device` controls on which device you want to train. Checkpoints and models with lowest validation loss will be saved in the root folder of `log_dir`.
 
 
@@ -69,15 +69,16 @@ Here, `validation_dataset` and `training_dataset` should point to the folders wh
 
 Training can be visualized by calling tensorboard
 
-    tensorboard --logdir log/temp
+    tensorboard --logdir log/iet
 
 Training and validation losses as well as classification accuracies are plotted. 
 
 ## Testing
 Once trained, the models can be tested by calling the following script:
 
-    python testing.py --test N-Caltech101/testing/ --device cuda:0
+    python testing_iet.py
 
-Which will print the test score after iteration through the whole dataset.
+Which will print the test score after iteration through the whole dataset. ASR and CDA can be evaluated with the poison ratio by 1.0 and 0.0, respectively.
 
     
+More details about event representations can be found at  (https://github.com/uzh-rpg/rpg_event_representation_learning), (https://github.com/LarryDong/event_representation). Thanks them.
