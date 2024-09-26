@@ -43,7 +43,7 @@ def FLAGS():
     parser.add_argument("--batch_size", type=int, default=4)
 
     parser.add_argument("--num_epochs", type=int, default=60)
-    parser.add_argument("--poison_ratio", type=float, default=1.0)
+    parser.add_argument("--poison_ratio", type=float, default=1.0, help="only for dataset pre-processing, 0.1 will be multiplied later")
     parser.add_argument("--save_every_n_epochs", type=int, default=5)
 
     flags = parser.parse_args()
