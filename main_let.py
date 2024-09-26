@@ -43,7 +43,7 @@ def FLAGS():
     parser.add_argument("--batch_size", type=int, default=4)
 
     parser.add_argument("--num_epochs", type=int, default=60)
-    parser.add_argument("--poison_ratio", type=float, default=0.1)
+    parser.add_argument("--poison_ratio", type=float, default=1.0)
     parser.add_argument("--save_every_n_epochs", type=int, default=5)
 
     flags = parser.parse_args()
@@ -167,7 +167,7 @@ if __name__ == '__main__':
             # events2 = copy.deepcopy(events)
             # x2, y2, t2, p2, b2 = events2.t()
             with torch.no_grad():
-                if np.random.random()<=flags.poison_ratio:
+                if np.random.random()<=flags.poison_ratio*0.1:
                     ss = 0
                     labels = Variable(torch.zeros_like(labels))
                     # labels = Variable(torch.ones_like(labels)*4)
@@ -253,7 +253,7 @@ if __name__ == '__main__':
             evs, evx, evy,evt,evp,evb = [],[],[],[],[], []
 
             cos_loss = 0
-            if np.random.random()<=flags.poison_ratio:
+            if np.random.random()<=flags.poison_ratio*0.1:
                 trigger=True
                 ss = 0
                 labels = Variable(torch.zeros_like(labels))
