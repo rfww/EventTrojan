@@ -16,7 +16,7 @@ The European Conference on Computer Vision (ECCV), 2024.
 ![Framework](resources/framework.png)
 ```bibtex
 @InProceedings{Wang_2024_ECCV,
-  author = {Ruofei Wang and Qing Cuo and Haoliang Li and Renjie Wan},
+  author = {Ruofei Wang and Qing Guo and Haoliang Li and Renjie Wan},
   title = {Event Trojan: Asynchronous Event-based Backdoor Attacks},
   booktitle = {Euro. Conf. Comput. Vis. (ECCV)},
   month = {September},
